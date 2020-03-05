@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .flexcontainer{
+            display: flex;
+            flex-direction:row;
+        }
+        .tablespacing{
+            width: 800px;
+            justify-self: center;
+        }
+        .tablesetup {
+            width: 50%;
+            border-spacing: 5px;
+            background-color: lightgreen;
+        }
+        .weektable{
+            align-content: right;
+        }
+        .daytable{
+            align-content: left;
+        }
+        .tableitemday {
+            border: #e3b174;
+            border-style:solid;
+            border-width: 2px;
+            height: 40px;
+        }
+        .tableitemweek{
+            border: #e3b174;
+            border-style:solid;
+            border-width: 2px;
+            height: 40px;
+        }
+        .tableitemspacing{
+            margin-left: 420px;
+            display:inline;
+        }
+    </style>
+</head>
+<body style = "background-color: #e87be4;">
+
+    <div class ="flexcontainer">
+    <table class = "tablesetup" frame ="Border">
+        <tr style ="font-size:20px">
+            <td>Entries<div class ="tableitemspacing">todaysdate</div></div></td>
+        </tr>
+        <td class = "tableitemday">Time</td>
+        <!-- ^above is example of day table item -->
+
+        
+    </table>
+
+    <div class = "tablespacing"></div>
+
+    <table class = "tablesetup" frame ="Border">
+            <tr style ="font-size:20px">
+                <td>Date <div class="tableitemspacing">Amount</div></td>
+            </tr>
+            <td class ="tableitemweek">Date<div class="tableitemspacing">timesperthisday</div></td>
+            <!-- ^above is an example of a week table item -->
+    </table>
+    </div>
+</body>
+</html>
