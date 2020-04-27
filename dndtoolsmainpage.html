@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnd Tools</title>
+    <link rel="stylesheet" type="text/css" href="dndtools.css">
+    <script type = "text/javascript" src = "dndtools.js"></script>
+</head>
+<body>
+    <div class = "navbarBackground">
+        <ul class = "navbar">
+            <a href = "dndtoolsmainpage.html">Character Sheets</a>
+            <a href = "dice.html">Dice Rolling</a>
+        </ul>
+    </div>
+    <h2>Character Sheet Generation</h2>
+    <div class = "flexbox-row">
+        <form id = "leftColumn" class = "flex-column">
+            <div>
+                Class 
+                <div class="dropdown">
+                <button type = "button" onclick="classDropdown()" class="dropButton" id = "classlist">----</button>
+                <div id="classDropdown" class="dropdown-content">
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid1`)" id = "classid1">Barbarian</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid2`)" id = "classid2">Bard</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid3`)" id = "classid3">Cleric</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid4`)" id = "classid4">Druid</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid5`)" id = "classid5">Fighter</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid6`)" id = "classid6">Monk</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid7`)" id = "classid7">Paladin</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid8`)" id = "classid8">Ranger</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid9`)" id = "classid8">Rouge</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid10`)" id = "classid10">Sorcerer</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid11`)" id = "classid11">Warlock</div>
+                  <div type = "button" onclick = "swapToTop(`classlist`, `classid12`)" id = "classid12">Wizard</div>
+                </div>
+              </div>
+            </div>
+            <div class = "forceright">
+              Starting Level
+              <div class="dropdown">
+                <button type = "button" onclick="lvlDropdown()" class="dropButton" id="levellist">-----</button>
+                <div id="lvlDropdown" class="dropdown-content">
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid1`)" id = "levelid1">1</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid2`)" id = "levelid2">2</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid3`)" id = "levelid3">3</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid4`)" id = "levelid4">4</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid5`)" id = "levelid5">5</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid6`)" id = "levelid6">6</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid7`)" id = "levelid7">7</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid8`)" id = "levelid8">8</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid9`)" id = "levelid9">9</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid10`)" id = "levelid10">10</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid11`)" id = "levelid11">11</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid12`)" id = "levelid12">12</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid13`)" id = "levelid13">13</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid14`)" id = "levelid14">14</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid15`)" id = "levelid15">15</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid16`)" id = "levelid16">16</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid17`)" id = "levelid17">17</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid18`)" id = "levelid18">18</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid19`)" id = "levelid19">19</div>
+                  <div type = "button" onclick = "swapToTop(`levellist`, `levelid20`)" id = "levelid20">20</div>
+                </div>
+              </div>
+            </div>
+            <div>
+                Race
+                <div class="dropdown">
+                    <button type = "button" onclick="raceDropdown()" class="dropButton" id="racelist">-----</button>
+                    <div id="raceDropdown" class="dropdown-content">
+                      <div type = "button" onclick = "swapToTop(`racelist`, `raceid1`)" id="raceid1">Dragonborn</div>
+                      <div type = "button" onclick = "swapToTop(`racelist`, `raceid2`)" id="raceid2">Dwarf</div>
+                      <div type = "button" onclick = "swapToTop(`racelist`, `raceid3`)" id="raceid3">Elf</div>
+                      <div type = "button" onclick = "swapToTop(`racelist`, `raceid4`)" id="raceid4">Gnome</div>
+                      <div type = "button" onclick = "swapToTop(`racelist`, `raceid5`)" id="raceid5">Half-Elf</div>
+                      <div type = "button" onclick = "swapToTop(`racelist`, `raceid6`)" id="raceid6">Halfling</div>
+                      <div type = "button" onclick = "swapToTop(`racelist`, `raceid7`)" id="raceid7">Half-Orc</div>
+                      <div type = "button" onclick = "swapToTop(`racelist`, `raceid8`)" id="raceid8">Human</div>
+                      <div type = "button" onclick = "swapToTop(`racelist`, `raceid9`)" id="raceid9">Tiefling</div>
+                    </div>
+                  </div>
+            </div>
+            <div class = "forceright">
+              Background
+              <div class="dropdown">
+                <button type = "button" onclick="backgroundDropdown()" class="dropButton" id="backgroundlist">-----</button>
+                <div id="backgroundDropdown" class="dropdown-content">
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid1`)" id="backgroundid1">Acolyte</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid2`)" id="backgroundid2">Charlatan</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Criminal</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Entertainer</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Folk Hero</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Gladiator</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Guild Artisan</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Guild Merchant</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Hermit</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Knight</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Noble</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Outlander</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Pirate</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Sage</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Sailor</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Soldier</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Spy</div>
+                  <div type = "button" onclick = "swapToTop(`backgroundlist`, `backgroundid3`)" id="backgroundid3">Urchin</div>
+                </div>
+              </div>
+            </div>
+            <div>
+                Alignment
+                <div class="dropdown">
+                    <button type = "button" onclick="alignmentDropdown()" class="dropButton" id = "alignmentlist">-----</button>
+                    <div id="alignmentDropdown" class="dropdown-content">
+                      <div type = "button" onclick = "swapToTop(`alignmentlist`, `alignmentid1`)" id = "alignmentid1">Lawful Good</div>
+                      <div type = "button" onclick = "swapToTop(`alignmentlist`, `alignmentid2`)" id = "alignmentid2">Neutral Good</div>
+                      <div type = "button" onclick = "swapToTop(`alignmentlist`, `alignmentid3`)" id = "alignmentid3">Chaotic Good</div>
+                      <div type = "button" onclick = "swapToTop(`alignmentlist`, `alignmentid4`)" id = "alignmentid4">Lawful Neutral</div>
+                      <div type = "button" onclick = "swapToTop(`alignmentlist`, `alignmentid5`)" id = "alignmentid5">True Neutral</div>
+                      <div type = "button" onclick = "swapToTop(`alignmentlist`, `alignmentid6`)" id = "alignmentid6">Chaotic Neutral</div>
+                      <div type = "button" onclick = "swapToTop(`alignmentlist`, `alignmentid7`)" id = "alignmentid7">Lawful Evil</div>
+                      <div type = "button" onclick = "swapToTop(`alignmentlist`, `alignmentid8`)" id = "alignmentid8">Neutral Evil</div>
+                      <div type = "button" onclick = "swapToTop(`alignmentlist`, `alignmentid9`)" id = "alignmentid9">Chaotic Evil</div>
+
+                    </div>
+                  </div>
+            </div>
+            <div class = "forceright">Hit Points: 
+              <input type = "radio" id = "rollPoints" name = "Hitpoints">
+              <label for="rollPoints">Roll Hitpoints</label>
+              <input type = "radio" id = "consistentPoints" name = "Hitpoints">
+              <label for="consistentPoints">consistent Hitpoints</label>
+            </div>
+            <div>Name <input type = "text"></div>
+            <h4>Character Stats</h4>
+            <div>Stat Selection type
+              <input type = "radio" id = "rollStats" name = "BaseStats" value = "1">
+              <label for="rollPoints">Roll Stats</label>
+              <input type = "radio" id = "spreadStats" name = "BaseStats" value = "2">
+              <label for="consistentPoints">Spread Stats</label>
+            </div>
+            <div id = "baseClass1">Strength: </div>
+            <div id = "baseClass2">Dexterity: </div>
+            <div id = "baseClass3">Constitution: </div>
+            <div id = "baseClass4">Intelligence: </div>
+            <div id = "baseClass5">Wisdom: </div>
+            <div id = "baseClass6">Charisma: </div>
+            <button type = "button" onclick = "statSetup()">Setup Stats</button>
+        </form>
+        <div id = "rightColumn" class = "flex-column">
+            <h4>Equipment</h4>
+            <br>
+            <div>Money</div>
+            <br>
+            <h4>Proficiencies</h4>
+            <div id = "skill1">Acrobatics: </div>
+            <div id = "skill2">Animal Handling: </div>
+            <div id = "skill3">Arcana: </div>
+            <div id = "skill4">Athletics: </div>
+            <div id = "skill5">Deception: </div>
+            <div id = "skill6">History: </div>
+            <div id = "skill7">Insight: </div>
+            <div id = "skill8">Intimidation: </div>
+            <div id = "skill9">Investigation: </div>
+            <div id = "skill10">Medicine: </div>
+            <div id = "skill11">Nature: </div>
+            <div id = "skill12">Perception: </div>
+            <div id = "skill13">Performance: </div>
+            <div id = "skill14">Persuasion: </div>
+            <div id = "skill15">Religon: </div>
+            <div id = "skill16">Sleight of Hand: </div>
+            <div id = "skill17">Stealth: </div>
+            <div id = "skill18">Survival: </div>
+        </div>
+    </div>
+</body>
+</html>
